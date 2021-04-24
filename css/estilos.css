@@ -1,0 +1,106 @@
+
+body{
+
+    background-color: #f5f5f5 ;
+}
+.colorPrimary {
+
+    background-color: #FF6960 !important;
+    color: white !important;
+}
+
+.colorOutline {
+
+    background-color: white !important;
+    color: #FF6960 !important;
+    border: 1px solid #FF6960 !important ;
+}
+
+.borderRoundButton {
+
+
+    border-radius: 20px !important;
+    margin-top: 10px;
+    padding: 10px 150px 10px 150px  !important;
+}
+
+
+
+.textButton {
+    margin-top: 10px;
+    text-decoration: none !important;
+    color: black !important;
+}
+
+
+.textButton:link {
+    margin-top: 10px;
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.inputMargin {
+
+
+    padding-top: 10px;
+}
+
+.table-secondary tbody+tbody, .table-secondary td, .table-secondary th, .table-secondary thead th {
+    border-color: #ffffff;
+}
+
+
+
+tbody {
+    background-color: #f5f5f5   ;
+}
+
+.aTable{
+    text-align: center;
+    text-decoration: underline;
+    color:#FF6960 !important;
+}
+
+.cards {
+ 
+    display: grid !important;
+     
+    grid-template-columns: repeat(auto-fill, 250px) !important;
+         
+    grid-auto-rows: auto !important;
+     
+    grid-gap: 1rem !important;
+     
+    }
+     
+     
+    .card {
+     
+    border: 2px solid #e7e7e7 !important;
+     
+    border-radius: 4px !important;
+    border: 1px solid white !important;
+     
+    padding: .5rem !important;
+    height: 500px;
+    padding: 30px !important;
+    }
+
+    h2{
+
+        font-size: 20px !important;
+    }
+
+    
+    h1{
+
+        font-size: 25px !important;
+    }
+
+    *:focus {
+        outline: none !important;
+        border:1px solid #FF6960 !important;
+        box-shadow: 0 0 10px #FF6960 !important;
+    }
+
+    
