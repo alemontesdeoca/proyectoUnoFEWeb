@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-04-2021 a las 01:58:44
--- Versión del servidor: 10.4.17-MariaDB
--- Versión de PHP: 8.0.1
+-- Tiempo de generación: 29-04-2021 a las 14:43:57
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.2.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `integracion_tecnologica`
+-- Base de datos: `proyecto-uno`
 --
 
 DELIMITER $$
@@ -47,7 +47,7 @@ DELIMITER ;
 CREATE TABLE `encuesta_cabecera` (
   `id_encuesta_cabecera` int(11) NOT NULL,
   `id_usuario` int(11) DEFAULT NULL,
-  `fecha` date DEFAULT NULL,
+  `fecha` timestamp NULL DEFAULT current_timestamp(),
   `id_producto` int(11) DEFAULT NULL,
   `id_estado` int(11) DEFAULT NULL,
   `puntuacion` int(11) DEFAULT NULL
@@ -58,9 +58,97 @@ CREATE TABLE `encuesta_cabecera` (
 --
 
 INSERT INTO `encuesta_cabecera` (`id_encuesta_cabecera`, `id_usuario`, `fecha`, `id_producto`, `id_estado`, `puntuacion`) VALUES
-(1, 1, '2021-04-14', 1, 4, 3),
-(2, 2, '2021-04-14', 1, 4, 5),
-(3, 3, '2021-04-06', 1, 4, 4);
+(4, 5, NULL, 1, 2, 25),
+(5, 5, NULL, 2, 4, 25),
+(6, 5, NULL, 3, 2, 100),
+(7, 5, NULL, 4, 2, 50),
+(8, 5, NULL, 5, 2, 100),
+(9, 5, NULL, 6, 2, 25),
+(10, 5, NULL, 7, 2, 100),
+(11, 5, NULL, 8, 2, 25),
+(12, 5, NULL, 9, 2, 50),
+(13, 5, NULL, 10, 2, 100),
+(14, 5, NULL, 11, 2, 100),
+(15, 5, NULL, 12, 2, 50),
+(16, 5, NULL, 13, 2, 25),
+(17, 8, NULL, 1, 2, 25),
+(18, 8, NULL, 2, 4, 25),
+(19, 8, NULL, 3, 2, 100),
+(20, 8, NULL, 4, 2, 50),
+(21, 8, NULL, 5, 4, 100),
+(22, 8, NULL, 6, 2, 25),
+(23, 8, NULL, 7, 2, 100),
+(24, 8, NULL, 8, 2, 25),
+(25, 8, NULL, 9, 2, 50),
+(26, 8, NULL, 10, 2, 100),
+(27, 8, NULL, 11, 2, 100),
+(28, 8, NULL, 12, 2, 50),
+(29, 8, NULL, 13, 2, 25),
+(147, 39, NULL, 1, 2, 25),
+(148, 39, NULL, 2, 2, 50),
+(149, 39, NULL, 3, 2, 100),
+(150, 39, NULL, 4, 2, 100),
+(151, 39, NULL, 5, 2, 25),
+(152, 39, NULL, 6, 2, 50),
+(153, 39, NULL, 7, 2, 100),
+(154, 39, NULL, 8, 2, 25),
+(155, 39, NULL, 9, 2, 25),
+(156, 39, NULL, 10, 2, 50),
+(157, 39, NULL, 11, 2, 50),
+(158, 39, NULL, 12, 2, 25),
+(159, 39, NULL, 13, 2, 100),
+(186, 56, NULL, 1, 2, 25),
+(187, 56, NULL, 2, 2, 50),
+(188, 56, NULL, 3, 2, 100),
+(189, 56, NULL, 4, 2, 100),
+(190, 56, NULL, 5, 2, 25),
+(191, 56, NULL, 6, 2, 50),
+(192, 56, NULL, 7, 2, 100),
+(193, 56, NULL, 8, 2, 25),
+(194, 56, NULL, 9, 2, 25),
+(195, 56, NULL, 10, 2, 50),
+(196, 56, NULL, 11, 2, 50),
+(197, 56, NULL, 12, 2, 25),
+(198, 56, NULL, 13, 2, 100),
+(199, 58, NULL, 1, 4, 25),
+(200, 58, NULL, 2, 2, 50),
+(201, 58, NULL, 3, 2, 100),
+(202, 58, NULL, 4, 2, 100),
+(203, 58, NULL, 5, 2, 25),
+(204, 58, NULL, 6, 2, 50),
+(205, 58, NULL, 7, 2, 100),
+(206, 58, NULL, 8, 2, 25),
+(207, 58, NULL, 9, 2, 25),
+(208, 58, NULL, 10, 2, 50),
+(209, 58, NULL, 11, 2, 50),
+(210, 58, NULL, 12, 2, 25),
+(211, 58, NULL, 13, 2, 100),
+(212, 62, NULL, 1, 2, 25),
+(213, 62, NULL, 2, 2, 50),
+(214, 62, NULL, 3, 2, 100),
+(215, 62, NULL, 4, 2, 100),
+(216, 62, NULL, 5, 2, 25),
+(217, 62, NULL, 6, 2, 50),
+(218, 62, NULL, 7, 2, 100),
+(219, 62, NULL, 8, 2, 25),
+(220, 62, NULL, 9, 2, 25),
+(221, 62, NULL, 10, 2, 50),
+(222, 62, NULL, 11, 2, 50),
+(223, 62, NULL, 12, 2, 25),
+(224, 62, NULL, 13, 2, 100),
+(225, 63, NULL, 1, 2, 25),
+(226, 63, NULL, 2, 2, 50),
+(227, 63, NULL, 3, 2, 100),
+(228, 63, NULL, 4, 2, 100),
+(229, 63, NULL, 5, 2, 25),
+(230, 63, NULL, 6, 2, 50),
+(231, 63, NULL, 7, 2, 100),
+(232, 63, NULL, 8, 2, 25),
+(233, 63, NULL, 9, 2, 25),
+(234, 63, NULL, 10, 2, 50),
+(235, 63, NULL, 11, 2, 50),
+(236, 63, NULL, 12, 2, 25),
+(237, 63, NULL, 13, 2, 100);
 
 -- --------------------------------------------------------
 
@@ -81,12 +169,25 @@ CREATE TABLE `encuesta_detalles` (
 --
 
 INSERT INTO `encuesta_detalles` (`encuesta_detalles`, `id_pregunta`, `id_respuesta`, `id_encuesta_cabecera`, `id_estado`) VALUES
-(1, 1, 3, 1, 4),
-(2, 3, 2, 1, 4),
-(3, 4, 3, 1, 4),
-(4, 1, 2, 2, 4),
-(5, 1, 3, 3, 4),
-(6, 4, 3, 3, 4);
+(186, 1, 206, 5, NULL),
+(187, 2, 207, 5, NULL),
+(188, 3, 208, 5, NULL),
+(189, 4, 209, 5, NULL),
+(190, 1, 210, 18, NULL),
+(191, 2, 211, 18, NULL),
+(192, 3, 212, 18, NULL),
+(193, 4, 213, 18, NULL),
+(194, 1, 214, 20, NULL),
+(195, 2, 215, 20, NULL),
+(196, 3, 216, 20, NULL),
+(197, 1, 217, 21, NULL),
+(198, 2, 218, 21, NULL),
+(199, 3, 219, 21, NULL),
+(200, 4, 220, 21, NULL),
+(201, 1, 221, 199, NULL),
+(202, 2, 222, 199, NULL),
+(203, 3, 223, 199, NULL),
+(204, 4, 224, 199, NULL);
 
 -- --------------------------------------------------------
 
@@ -144,10 +245,10 @@ CREATE TABLE `pregunta` (
 --
 
 INSERT INTO `pregunta` (`id_pregunta`, `descripcion_pregunta`, `id_estado`) VALUES
-(1, 'Consumiste este producto alguna vez', NULL),
-(2, 'Porque no lo consumiste', NULL),
-(3, 'que pensas de al respecto', NULL),
-(4, 'Se lo recomendarias a alguien', NULL);
+(1, '¿Consumís habitualmente este producto?', NULL),
+(2, '¿Qué es lo que más te gusta?', NULL),
+(3, '¿Qué pensas sobre la calidad?', NULL),
+(4, '¿Se lo recomendarías a alguien?', NULL);
 
 -- --------------------------------------------------------
 
@@ -160,15 +261,29 @@ CREATE TABLE `producto` (
   `nombre_producto` varchar(100) NOT NULL,
   `descripcion` varchar(200) DEFAULT NULL,
   `imagen` varchar(255) DEFAULT NULL,
-  `id_marca` int(11) DEFAULT NULL
+  `id_marca` int(11) DEFAULT NULL,
+  `puntuacion` int(11) NOT NULL,
+  `estado` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`id_producto`, `nombre_producto`, `descripcion`, `imagen`, `id_marca`) VALUES
-(1, 'bonobon leche', 'Bon o Bon Leche (relleno con crema de mani y banhado en chocolate con leche)', '/imagenes/bonobon.jpg', 1);
+INSERT INTO `producto` (`id_producto`, `nombre_producto`, `descripcion`, `imagen`, `id_marca`, `puntuacion`, `estado`) VALUES
+(1, 'BON O BON LECHE', 'Bon o Bon Leche (relleno con crema de mani y banhado en chocolate con leche)', 'imagenes/bonobon.png', 1, 25, 1),
+(2, 'ARCOA', 'Alimento a base de cacao\r\n', 'imagenes/arcoa.png', 1, 50, 1),
+(3, 'JUGO MULTIFRUTA', 'Polvo para preparar bebida analcohólica artificial dietética de bajas calorías sabor a multifruta', 'imagenes/arcorJugo.png', 1, 100, 1),
+(4, 'MERMELADA FRUTILLA', 'Mermelada de frutilla libre de gluten.', 'imagenes/arcorMermeladaFrutilla.png', 1, 100, 1),
+(5, 'ARVEJAS SECAS REMOJADAS', 'Arvejas secas remojadas libre de gluten', 'imagenes/arvejas.png', 1, 25, 1),
+(6, 'ARCOR BLANCO', 'Chocolate Blanco', 'imagenes/chocolateBlanco.png', 1, 50, 1),
+(7, 'CARAMELO MASTICABLE TUTTI FRUTTI CRAZY', 'Caramelo masticable sabor tutti frutti. Libre de gluten', 'imagenes/crazy.png', 1, 100, 1),
+(8, 'KOPA ARCOR DULCE DE LECHE Y AMERICANA', 'Crema helada de dulce de leche y sabor Crema americana con salsa de dulce de leche', 'imagenes/kopa.png', 1, 25, 1),
+(9, 'PALITO ARCOR CREMA AMERICANA', 'Helado de crema americana con cobertura de chocolate con leche', 'imagenes/palito.png', 1, 25, 1),
+(10, 'OBLEAS ARCOR SABOR FRUTILLA', 'Obleas dulces con relleno sabor frutilla', 'imagenes/obleaFrutilla.png', 1, 50, 1),
+(11, 'POSTRE HELADO TRES CREMAS', 'Crema helada de dulce de leche, chocolate y sabor vainilla', 'imagenes/tresCremas.png', 1, 50, 1),
+(12, 'SLICE FRUTILLA CON FRUTA', 'Helado de agua de frutilla con frutilla en trozos', 'imagenes/slice.png', 1, 25, 1),
+(13, 'TURRÓN', 'Oblea rellena con pasta de turrón y maní', 'imagenes/turronMani.png', 1, 100, 1);
 
 -- --------------------------------------------------------
 
@@ -187,16 +302,25 @@ CREATE TABLE `respuesta` (
 --
 
 INSERT INTO `respuesta` (`id_respuesta`, `descripcion_respuesta`, `id_pregunta`) VALUES
-(1, 'Porque lo conozco', 2),
-(2, 'No', 1),
-(3, 'si', 1),
-(4, 'Por problemas de salud', 2),
-(5, 'otro', 2),
-(6, 'Es el mas rico que probe', 3),
-(7, 'No tiene buen sabor', 3),
-(8, 'No me gusta', 3),
-(9, 'si lo recomendaria', 4),
-(10, 'no lo recomendaria', 4);
+(206, 'si', 1),
+(207, 'su sabor', 2),
+(208, 'es muy buena', 3),
+(209, 'si', 4),
+(210, 'si', 1),
+(211, 'el precio', 2),
+(212, 'media', 3),
+(213, 'puede ser', 4),
+(214, 'si', 1),
+(215, 'El sabor', 2),
+(216, 'Muy buena', 3),
+(217, 'Si', 1),
+(218, 'Su sabor', 2),
+(219, 'Muy buena', 3),
+(220, 'Si', 4),
+(221, 'si', 1),
+(222, 'todo', 2),
+(223, 'es muy buena', 3),
+(224, 'por supuesto', 4);
 
 -- --------------------------------------------------------
 
@@ -206,23 +330,36 @@ INSERT INTO `respuesta` (`id_respuesta`, `descripcion_respuesta`, `id_pregunta`)
 
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
-  `alias` varchar(30) NOT NULL,
+  `alias` varchar(255) NOT NULL,
   `pass_word` varchar(255) DEFAULT NULL,
   `nombre` varchar(30) DEFAULT NULL,
   `apellido` varchar(30) DEFAULT NULL,
   `telefono` varchar(30) DEFAULT NULL,
   `direccion` varchar(30) DEFAULT NULL,
-  `usuario_activo` tinyint(4) DEFAULT 1
+  `usuario_activo` tinyint(4) DEFAULT 1,
+  `puntos` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `alias`, `pass_word`, `nombre`, `apellido`, `telefono`, `direccion`, `usuario_activo`) VALUES
-(1, 'admin', '$2y$10$gf1eexrDxmz0woAjPMRgZOkZaWbYR/cKC8rTvjeQiK67W9F/jos0.', 'admin', 'admin', '123456789', 'calle123', 1),
-(2, 'juan', '$2y$10$58iieVpxjmicL4XSobmltOln9CLAHNOzySDHdHKck4F13uA4RWviq', 'juan ', 'juan', '1234567', 'calle 204', 0),
-(3, 'mario', '$2y$10$CwLYzWtlIvdxbC2tX3IzCOQh/VO/j7SZIQrPHqi3AnanOU9/sr3xe', 'mario', 'gonzales', '789456123', 'una calle', 0);
+INSERT INTO `usuario` (`id_usuario`, `alias`, `pass_word`, `nombre`, `apellido`, `telefono`, `direccion`, `usuario_activo`, `puntos`) VALUES
+(1, 'admin', '$2y$10$gf1eexrDxmz0woAjPMRgZOkZaWbYR/cKC8rTvjeQiK67W9F/jos0.', 'admin', 'admin', '123456789', 'calle123', 1, 0),
+(2, 'juan', '$2y$10$58iieVpxjmicL4XSobmltOln9CLAHNOzySDHdHKck4F13uA4RWviq', 'juan ', 'juan', '1234567', 'calle 204', 0, 250),
+(3, 'mario', '$2y$10$CwLYzWtlIvdxbC2tX3IzCOQh/VO/j7SZIQrPHqi3AnanOU9/sr3xe', 'mario', 'gonzales', '789456123', 'una calle', 0, 0),
+(4, 'admin2', '$2y$10$N6hZsXYrEeuUFyVcsdF0KuKTKFgH2GJriCyVmFjsu3AQM2hACAZS.', 'admin', 'admin', '12124124', 'asdsa', 1, 1),
+(5, 'juan-perez@gmail.com', '12345', 'Juan', 'Perez', '1200', 'Cervantez', 1, 325),
+(6, 'Alexander-montes@gmail.com', '$2y$10$nO6hWtDZvR0uWWWmjrIIo.D6ToGXedBkZIEED3iYkytYjC/h0I3XO', 'asdas', 'sad', 'sad', 'asd', 1, 0),
+(7, 'alex', '$2y$10$rC3QQduFr/e2KWPeA6Ftd.dmQQ.WhvfQY3E4IutAu9imwVK2Fwcea', 'alex', 'montes', '123123', 'cuenca', 1, 0),
+(8, 'alex.montes@gmail.com', '12345', 'Alex', 'Montes de Oca', '11 ', 'Cervantez', 1, 225),
+(9, 'ale.ramallo@gmail.com', '12345', 'alejandro', 'ramallo', '11123132', 'asda', 1, 100),
+(39, 'alexander@gmail.com', '12345', 'alexander', 'montesdeoca', '1560278611', 'cuenca', 1, 0),
+(53, 'alexandeaar@gmail.com', '12345', 'alexander', 'montesdeoca', '1560278611', 'cuenca', 1, 0),
+(56, 'alex@gmail.com', '12345', 'alexander', 'montesdeoca', '1560278611', 'cuenca', 1, 0),
+(58, 'paulo-gomez@gmail.com', '12345', 'paulo', 'gomez', '1156289101', 'cuenca', 1, 25),
+(62, 'alexa', '12335', 'alex', 'm', '1', 'cuenca', 1, 0),
+(63, 'Enya.enya', '8cb2237d0679ca88db6464eac60da96345513964', 'enya', '12345678', '115627282', 'Cuenca', 1, 0);
 
 --
 -- Índices para tablas volcadas
@@ -284,7 +421,8 @@ ALTER TABLE `respuesta`
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id_usuario`);
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD UNIQUE KEY `alias` (`alias`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -294,13 +432,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `encuesta_cabecera`
 --
 ALTER TABLE `encuesta_cabecera`
-  MODIFY `id_encuesta_cabecera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_encuesta_cabecera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=238;
 
 --
 -- AUTO_INCREMENT de la tabla `encuesta_detalles`
 --
 ALTER TABLE `encuesta_detalles`
-  MODIFY `encuesta_detalles` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `encuesta_detalles` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=205;
 
 --
 -- AUTO_INCREMENT de la tabla `estado`
@@ -324,19 +462,19 @@ ALTER TABLE `pregunta`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `respuesta`
 --
 ALTER TABLE `respuesta`
-  MODIFY `id_respuesta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_respuesta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=225;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- Restricciones para tablas volcadas
